@@ -5,10 +5,12 @@ import emailIcon from '../../assets/email.png'
 import githubIcon from '../../assets/github.png'
 import linkedinIcon from '../../assets/linkedin.png'
 import CV from '../../assets/MUSHAHIDCV.pdf'
+import { useTheme } from '../../common/ThemeContext'
 function Hero() {
+  const {theme, toggleTheme} =useTheme();
   return <section id="hero" className={styles.container}>
-    <div className={styles.colorModeContainer}><img className={styles.hero} src={heroImg} alt="" />
-    <img className={styles.colorMode} src={themeIcon} alt="" />
+    <div className={styles.colorModeContainer}><img className={styles.hero} src={heroImg} alt="Profile Picture" />
+    <img className={styles.colorMode} src={themeIcon} alt="color mode icon " />
     </div>
     <div className={styles.info}>
       <h1>MUHAMMADMUSHAHID <br /> MAKANDAR</h1>
