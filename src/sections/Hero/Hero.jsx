@@ -1,16 +1,27 @@
 import styles from './HeroStyle.module.css'
 import heroImg from '../../assets/profile.jpeg'
-import themeIcon from '../../assets/moon.png'
-import emailIcon from '../../assets/email.png'
-import githubIcon from '../../assets/github.png'
-import linkedinIcon from '../../assets/linkedin.png'
+import sun from '../../assets/sun.png'
+import moon from '../../assets/moon.png'
+import emailDark from '../../assets/EMAIL.C.png'
+import emailLight from '../../assets/email.png'
+import githubDark from '../../assets/Github (2).png'
+import githubLight from '../../assets/github.png'
+import linkedinDark from '../../assets/LinkedIn (2).png'
+import linkedinLight from '../../assets/linkedin.png'
 import CV from '../../assets/MUSHAHIDCV.pdf'
 import { useTheme } from '../../common/ThemeContext'
 function Hero() {
   const {theme, toggleTheme} =useTheme();
+
+
+  const themeIcon = theme === 'light' ? sun : moon;
+  const emailIcon = theme === 'light' ? emailLight : emailDark;
+  const githubIcon = theme === 'light' ? githubLight : githubDark;
+  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+
   return <section id="hero" className={styles.container}>
     <div className={styles.colorModeContainer}><img className={styles.hero} src={heroImg} alt="Profile Picture" />
-    <img className={styles.colorMode} src={themeIcon} alt="color mode icon " />
+    <img className={styles.colorMode} src={themeIcon} alt="color mode icon " onClick={toggleTheme}/>
     </div>
     <div className={styles.info}>
       <h1>MUHAMMADMUSHAHID <br /> MAKANDAR</h1>
