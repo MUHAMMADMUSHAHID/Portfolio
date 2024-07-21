@@ -55,8 +55,14 @@
   
   .colorModeContainer {
     position: relative;
+   
   }
-  
+
+  /* img {
+    background-color: rgb(230, 75, 217);
+    border-radius: 30%;
+  }
+   */
   .colorMode {
     position: absolute;
     right: 0;
